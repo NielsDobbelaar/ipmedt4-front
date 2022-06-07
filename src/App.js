@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+import MyMap from "./MyMap";
+import Bedrijf from "./Bedrijf";
+
+class App extends React.Component {
+  state = { showingBedrijf: false, currentBedrijf: "test"} 
+
+  
+  showBedrijf = (bedrijfID) => {
+    this.setState({currentBedrijf: bedrijfID, showingBedrijf: true})
+
+  }
+
+  showMap = () => {
+    this.setState({currentBedrijf: "", showingBedrijf: false})
+  }
+
+  render() { 
+    if(this.state.showingBedrijf){
+      return(
+        <Bedrijf bedrijfID={this.state.currentBedrijf} showMap={this.showMap}></Bedrijf>
+      )
+    }
+    return (
+      <MyMap showBedrijf={this.showBedrijf}/>
+    );
+  }
+}
+ 
 export default App;
