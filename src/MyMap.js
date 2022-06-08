@@ -24,11 +24,11 @@ class MyMap extends React.Component {
                 if(bedrijf.status === "onbekend"){
                     return <CircleMarker
                         key={bedrijf.mil_locationname} 
-                        radius={3} 
+                        radius={5} 
                         center={[bedrijf.latitude, bedrijf.longitude]}
-                        color={"black"}
+                        color={"#CFF6FF"}
                         weight={1}
-                        fillColor={"yellow"}
+                        fillColor={"#56C1FE"}
                         fillOpacity={1}
                         >
                             <Popup>
@@ -39,9 +39,9 @@ class MyMap extends React.Component {
                 }
                 return <CircleMarker
                  key={bedrijf.mil_locationname} 
-                 radius={3} 
+                 radius={5} 
                  center={[bedrijf.latitude, bedrijf.longitude]}
-                 color={"black"}
+                 color={"#CFD1FF"}
                  weight={1}
                  fillColor={"blue"}
                  fillOpacity={1}
@@ -54,7 +54,7 @@ class MyMap extends React.Component {
             })}
           
           <TileLayer
-            url="https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibmllbHNkb2JiZWxhYXIiLCJhIjoiY2wxMjN4anhjMDJvYjNlcGR3ZDVwN2RhbiJ9.M3p510hqjAir3XSYRvPqsQ"
+            url="https://api.mapbox.com/styles/v1/v1nh/cl337zqe5004h15qf77944jkd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoidjFuaCIsImEiOiJjbDMzN25lbGUwMDV4M2ltdWxlc2hhbm13In0.eHbrg6KBHEbBUxOvvvTpsQ"
             maxZoom={20}
           >
           </TileLayer>
