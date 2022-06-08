@@ -1,0 +1,14 @@
+.popup__button{
+    color: black;
+    border: 1px solid black;
+    background: white;
+    border-radius: 0.5rem;
+}
+
+.popup__button:hover{
+    cursor: pointer;
+}
+
+.popup__heading{
+
+}
