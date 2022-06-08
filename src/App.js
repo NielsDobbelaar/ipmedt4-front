@@ -16,22 +16,6 @@ class App extends React.Component {
     console.log(1)
 
   }
-  showBedrijf = () => {
-    this.setState({showing: "bedrijf"});
-    console.log(2)
-  }
-
-  showMap = () => {
-    this.setState({currentBedrijf: "", showing: "map"})
-  }
-
-  showIrrelevant = () => {
-    this.setState({showing: "irrelevant"});
-  }
-
-  showPlanLijst = () => {
-    this.setState({showing: "planLijst"});
-  }
 
   setIrrelevant = (bedrijfID) => {
     //implement setirrelevant
@@ -53,7 +37,7 @@ class App extends React.Component {
       case "bedrijf": 
         return <Bedrijf bedrijfID={this.state.currentBedrijf} showPage={this.showPage}></Bedrijf>
       case "irrelevant":
-        return <Irrelevant bedrijfID={this.state.currentBedrijf}showPage={this.showPage} setIrrelevant={this.setIrrelevant}></Irrelevant>
+        return <Irrelevant bedrijfID={this.state.currentBedrijf} showPage={this.showPage} setIrrelevant={this.setIrrelevant}></Irrelevant>
       case "planLijst":
         return <Planlijst bedrijfID={this.state.currentBedrijf} showPage={this.showPage} setToPlanlijst={this.setToPlanlijst} ></Planlijst>
       default:
