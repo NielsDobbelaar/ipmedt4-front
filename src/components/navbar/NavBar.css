@@ -10,8 +10,6 @@
 
 .navbar:first-child > div img { margin-right: auto; }
 
-.navbar:last-child  > div div { margin-left: auto;  }
-
 .navbar {
   align-items: center;
   width: 100%;
@@ -39,7 +37,7 @@
   width: 2.5rem;
   height: 2rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-around;
   flex-flow: column nowrap;
   z-index: 10;
