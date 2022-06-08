@@ -13,7 +13,6 @@ class App extends React.Component {
   
   setBedrijf = (bedrijfID) => {
     this.setState({currentBedrijf: bedrijfID});
-    console.log(1)
 
   }
 
@@ -28,11 +27,13 @@ class App extends React.Component {
   }
 
   showPage = (page) =>{
-    this.setState({showing: page})
+    // vraag me niet waarom maar hij spit errors als deze lijn niet in setTimeout staat ookal is het letterlijk 0 seconden delay
+    setTimeout(() => {
+      this.setState({showing: page})
+    }, 0);
   }
 
   render() { 
-    console.log(this.state)
     switch (this.state.showing){
       case "bedrijf": 
         return <Bedrijf bedrijfID={this.state.currentBedrijf} showPage={this.showPage}></Bedrijf>
