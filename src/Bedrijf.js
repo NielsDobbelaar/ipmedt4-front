@@ -8,9 +8,9 @@ class Bedrijf extends React.Component {
         return (
         <section>
             <h1>{this.props.bedrijfID}</h1>
-            <button onClick={this.props.showMap}>Terug</button>
-            <button onClick={this.props.showIrrelevant}>Irrelevant</button>
-            <button onClick={this.props.showPlanLijst}>Zet op Planlijst</button>
+            <button onClick={()=> this.props.showPage("map")}>Terug</button>
+            <button onClick={()=> this.props.showPage("irrelevant")}>Irrelevant</button>
+            <button onClick={()=> this.props.showPage("planLijst")}>Zet op Planlijst</button>
         </section>
         );
     }

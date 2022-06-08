@@ -43,16 +43,21 @@ class App extends React.Component {
     console.log("setToPlanLijst");
   }
 
+  showPage = (page) =>{
+    this.setState({showing: page})
+  }
+
   render() { 
+    console.log(this.state)
     switch (this.state.showing){
       case "bedrijf": 
-        return <Bedrijf bedrijfID={this.state.currentBedrijf} showMap={this.showMap} showPlanLijst={this.showPlanLijst} showIrrelevant={this.showIrrelevant}></Bedrijf>
+        return <Bedrijf bedrijfID={this.state.currentBedrijf} showPage={this.showPage}></Bedrijf>
       case "irrelevant":
-        return <Irrelevant bedrijfID={this.state.currentBedrijf} showMap={this.showMap} setIrrelevant={this.setIrrelevant} showBedrijf={this.showBedrijf}></Irrelevant>
+        return <Irrelevant bedrijfID={this.state.currentBedrijf}showPage={this.showPage} setIrrelevant={this.setIrrelevant}></Irrelevant>
       case "planLijst":
-        return <Planlijst bedrijfID={this.state.currentBedrijf} showMap={this.showMap} showBedrijf={this.showBedrijf} setToPlanlijst={this.setToPlanlijst} ></Planlijst>
+        return <Planlijst bedrijfID={this.state.currentBedrijf} showPage={this.showPage} setToPlanlijst={this.setToPlanlijst} ></Planlijst>
       default:
-        return <MyMap setBedrijf={this.setBedrijf} showBedrijf={this.showBedrijf}/>
+        return <MyMap setBedrijf={this.setBedrijf} showPage={this.showPage}/>
     }
 
   }

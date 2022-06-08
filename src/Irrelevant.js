@@ -9,8 +9,8 @@ class Irrelevant extends React.Component {
         <section>
             <h1>irrelevant</h1>
             <h2>{this.props.bedrijfID}</h2>
-            <button onClick={this.props.showBedrijf}>Terug</button>
-            <button onClick={()=>{this.props.setIrrelevant(this.props.bedrijfID); this.props.showMap()}}>Markeer irrelevant</button>
+            <button onClick={()=> this.props.showPage("bedrijf")}>Terug</button>
+            <button onClick={()=>{this.props.setIrrelevant(this.props.bedrijfID); this.props.showPage("map")}}>Markeer irrelevant</button>
         </section>
         );
     }
