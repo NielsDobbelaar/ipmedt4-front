@@ -38,7 +38,7 @@ class MyMap extends React.Component {
                         >
                             <Popup>
                                 <h2 className="popup_heading">{bedrijf.mil_locationname}</h2>
-                                <button className="popup__button" onClick={() => {this.props.setBedrijf(bedrijf.unique_id); this.props.showPage("bedrijf")}}>Naar bedrijf</button>
+                                <button className="popup__button" onClick={() => {this.props.setBedrijf(bedrijf); this.props.showPage("bedrijf")}}>Naar bedrijf</button>
                             </Popup>
                         </CircleMarker>
                 }
@@ -53,7 +53,7 @@ class MyMap extends React.Component {
                     >
                     <Popup>
                         <h2 className="popup_heading">{bedrijf.mil_locationname}</h2>
-                        <button className="popup__button" onClick={() => {this.props.setBedrijf(bedrijf.unique_id); this.props.showPage("bedrijf")}}>Naar bedrijf</button>
+                        <button className="popup__button" onClick={() => {this.props.setBedrijf(bedrijf); this.props.showPage("bedrijf")}}>Naar bedrijf</button>
                     </Popup>
                     </CircleMarker>
             })}
