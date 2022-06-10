@@ -21,6 +21,11 @@
 .navbar-name {
   font-size: 1.8rem;
   font-weight: 600;
+  width: 5%;
+}
+
+.navbar-name:hover {
+  cursor: pointer;
 }
 
 .burger{

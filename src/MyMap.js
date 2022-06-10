@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from './components/navbar/NavBar.js';
-import './components/navbar/NavBar.css';
 
 
 import {MapContainer, CircleMarker, TileLayer, Popup} from 'react-leaflet'; 
@@ -20,6 +19,7 @@ class MyMap extends React.Component {
         return (
             <div className="MyMap">
                 <NavBar></NavBar>
+                <div className="map">
                 <MapContainer
             center={this.mapCenter}
             zoom={12}
@@ -37,8 +37,10 @@ class MyMap extends React.Component {
                         fillOpacity={1}
                         >
                             <Popup>
-                                <h2 className="popup_heading">{bedrijf.mil_locationname}</h2>
-                                <button className="popup__button" onClick={() => {this.props.setBedrijf(bedrijf); this.props.showPage("bedrijf")}}>Naar bedrijf</button>
+                                <div className="popup__container">
+                                    <h2 className="popup__header">{bedrijf.mil_locationname}</h2>
+                                    <button className="popup__button" onClick={() => {this.props.setBedrijf(bedrijf); this.props.showPage("bedrijf")}}>Naar bedrijf</button>
+                                </div>
                             </Popup>
                         </CircleMarker>
                 }
@@ -52,8 +54,10 @@ class MyMap extends React.Component {
                     fillOpacity={1}
                     >
                     <Popup>
-                        <h2 className="popup_heading">{bedrijf.mil_locationname}</h2>
-                        <button className="popup__button" onClick={() => {this.props.setBedrijf(bedrijf); this.props.showPage("bedrijf")}}>Naar bedrijf</button>
+                        <div className="popup__container">
+                            <h2 className="popup__header">{bedrijf.mil_locationname}</h2>
+                            <button className="popup__button" onClick={() => {this.props.setBedrijf(bedrijf); this.props.showPage("bedrijf")}}>Naar bedrijf</button>
+                        </div>
                     </Popup>
                     </CircleMarker>
             })}
@@ -64,6 +68,7 @@ class MyMap extends React.Component {
             >
             </TileLayer>
                 </MapContainer>
+                </div>
             </div>
         );
     }

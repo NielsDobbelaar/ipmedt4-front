@@ -1,32 +1,36 @@
 import React from "react";
 import './planLijst.css';
+import NavBar from './components/navbar/NavBar.js';
 
 class PlanLijst extends React.Component {
     state = {  } 
 
     render() { 
         return (
-            <article>
-            <h1>PlanLijst</h1>
+        <div className="container">
+            <NavBar></NavBar>
+            <article className="card">
+                <button className="back" onClick={(e)=> {e.preventDefault(); this.props.showPage("bedrijf")}}>&lt; Terug</button>
+                <h1>Planlijst</h1>
             <section>
-                <form action="127.0.0.7:8000" method="GET"> 
+                <form class="bedrijfForm" action="127.0.0.7:8000" method="GET"> 
                     <h2>{this.props.bedrijfObject.mil_locationname}</h2>
                     
-                    <label htmlFor="reden">Waarom gaat het bedrijf naar de PlanLijst:</label>
+                    <label htmlFor="reden">Waarom gaat het bedrijf naar de Planlijst?</label>
                     <select name="reden" id="reden">
-                    <option value="SBI is relevant">SBI is niet relevant</option>
-                    <option value="relevant op basis van WOZ-gegevens">Niet relevant op basis van WOZ-gegevens</option>
-                    <option value="Bedrijf is groot genoeg">Bedrijf is te klein</option>
+                        <option value="SBI is relevant">SBI is niet relevant</option>
+                        <option value="relevant op basis van WOZ-gegevens">Niet relevant op basis van WOZ-gegevens</option>
+                        <option value="Bedrijf is groot genoeg">Bedrijf is te klein</option>
                     </select>
 
                     <label htmlFor="aantekening">Aantekening/Toelichting</label>
-                    <input type="text" name="aantekening" id="aantekening"></input>
+                    <textarea name="aantekening" id="aantekening" placeholder="Vul hier je aantekening/toelichting in"/>
 
-                    <button onClick={(e)=> {e.preventDefault(); this.props.showPage("bedrijf")}}>Terug</button>
-                    <input type="submit" value="submit" />
+                    <input type="submit" value="Versturen" />
                     </form>
                </section>
             </article>
+        </div>
         );
     }
 }
