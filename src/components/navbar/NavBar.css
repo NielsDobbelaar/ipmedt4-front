@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar:first-child>div img {
+  margin-right: auto;
+}
+
+.navbar {
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  transition: all 0.5s;
+  padding: 2.5rem;
+}
+
+.navbar-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 5%;
+}
+
+.navbar-name:hover {
+  cursor: pointer;
+}
+
+.burger {
+  align-items: center;
+  width: 2.5rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  background-color: black;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+.navbar-menu {
+  width: 2.5rem;
+  height: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* .burger1{
+  transform: ${ isOpen ? 'rotate(45deg)' : 'rotate(0)'};
+}
+.burger2{
+  transform: ${ isOpen ? 'translateX(100%)' : 'translateX(0)'};
+  opacity: ${ isOpen ? 0 : 1};
+}
+.burger3{
+  transform: ${ isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+} */

@@ -1,0 +1,107 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.5rem;
+    height: 85vh;
+}
+
+.card ul li {
+    list-style-type: none;
+}
+
+.back {
+    width: 14%;
+    height: 1%;
+    border: none;
+    background: none;
+    padding-bottom: 3rem;
+    color: #5F5F5F;
+    text-align: left;
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+.bedrijfInfoArticle {
+    margin-top: bottom;
+}
+
+.bedrijfInfoArticle h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.bedrijfInfoArticle h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #8C8C8C;
+}
+
+.bedrijfInfoArticle h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #979696;
+    padding-bottom: 2rem;
+}
+
+.bedrijfInfoArticle__section {
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 7px 8px;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.bedrijfInfoArticle__section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.bedrijfInfoArticle__section li {
+    display: flex;
+    flex-direction: row;
+    line-height: 14px;
+    color: #686868;
+}
+
+.bedrijfInfoArticle__section p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000;
+    padding-right: 0.5rem;
+}
+
+
+.buttonSection {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.buttonSection button {
+    width: 16.5rem;
+    height: 5rem;
+    border-radius: 5px;
+}
+
+.btn1 {
+    background: #367CFF;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border: none;
+}
+
+.btn2 {
+    background: none;
+    color: #367CFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: 3px solid #367CFF;
+}

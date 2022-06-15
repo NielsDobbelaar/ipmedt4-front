@@ -1,0 +1,45 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 2.5rem;
+    height: 90vh;
+}
+
+.introduction img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 3rem;
+    padding-top: 8rem;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.intro-text p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.intro-btns {
+    margin-top: auto;
+}
+
+.btn {
+    width: 14rem;
+    height: 5rem;
+    background: #34CF56;
+    border-radius: 5px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;   
+}
+
+.intro-btns svg {
+    padding-left: 1rem;
+}
