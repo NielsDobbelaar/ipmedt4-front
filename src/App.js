@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import Header from './components/header/Header';
+import axios from "axios";
 // import NavBar from './components/navbar/NavBar';
 // import Introduction from './components/content/Introduction';
 
@@ -14,27 +14,35 @@ class App extends React.Component {
   state = { showing: "map", currentBedrijf: ""} 
 
   
-  setBedrijf = (bedrijfObject) => {
-    this.setState({currentBedrijf: bedrijfObject});
-
-  }
-
-  setIrrelevant = (bedrijfObject) => {
-    //implement setirrelevant
-    console.log("setIrrelevant")
-  }
-
-  setToPlanlijst = (bedrijfObject) => {
-    //implement setToPlanLijst
-    console.log("setToPlanLijst");
-  }
-
   showPage = (page) =>{
     // vraag me niet waarom maar hij spit errors als deze lijn niet in setTimeout staat ookal is het letterlijk 0 seconden delay
     setTimeout(() => {
       this.setState({showing: page})
     }, 0);
   }
+  
+  setBedrijf = (bedrijfObject) => {
+    this.setState({currentBedrijf: bedrijfObject});
+
+  }
+
+  setIrrelevant = async (data) => {
+    //implement setirrelevant
+    
+    console.log(data)
+    let res = await axios.post('http://127.0.0.1:8000/api/irrelevant', data)
+    console.log(res)
+
+  }
+
+  setToPlanlijst = async (data) => {
+    //implement setToPlanLijst
+    console.log(data);
+    let res = await axios.put('http://127.0.0.1:8000/api/planLijst', data)
+    console.log(res)
+
+  }
+
 
   render() { 
     switch (this.state.showing){
