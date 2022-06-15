@@ -1,0 +1,52 @@
+.home__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__card {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.figure__card {
+    margin-top: 2rem;
+    pointer-events: none;
+}
+
+.home_card__h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'SF Pro Display', sans-serif;
+    padding: 1rem;
+}
+
+.home__button {
+    padding: 1rem;
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: #34CF56;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.home__button:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+    .home_card__h1 {
+        font-size: 2.6rem;
+    }
+
+    .home__button {
+        width: 50%;
+    }
+}
