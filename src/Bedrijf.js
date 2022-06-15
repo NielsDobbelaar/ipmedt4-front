@@ -7,6 +7,15 @@ class Bedrijf extends React.Component {
      
 
     render() { 
+
+        let buttons;
+        if(this.props.bedrijfObject.status ==="onbekend"){
+            buttons = <section className="buttonSection">
+            <button className="btn1" onClick={()=> this.props.showPage("irrelevant")}>Irrelevant</button>
+            <button className="btn2" onClick={()=> this.props.showPage("planLijst")}>Zet op Planlijst</button>
+        </section>;
+        }
+
         return (
             <div className="container">
                 <NavBar></NavBar>
@@ -59,11 +68,8 @@ class Bedrijf extends React.Component {
                         </section>
                     </article>
 
-
-                    <section className="buttonSection">
-                        <button className="btn1" onClick={()=> this.props.showPage("irrelevant")}>Irrelevant</button>
-                        <button className="btn2" onClick={()=> this.props.showPage("planLijst")}>Zet op Planlijst</button>
-                    </section>
+                    {buttons}
+                    
                 </article>
             </div>
         );

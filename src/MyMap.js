@@ -1,11 +1,12 @@
 import React from "react";
 import NavBar from './components/navbar/NavBar.js';
+import axios from 'axios';
 
 
 import {MapContainer, CircleMarker, TileLayer, Popup} from 'react-leaflet'; 
 import 'leaflet/dist/leaflet.css';
 
-import mapData from './geoJSON/bedrijven_normal_json.json'
+// import mapData from './geoJSON/bedrijven_normal_json.json'
 
 import './MyMap.css';
 
@@ -14,6 +15,17 @@ class MyMap extends React.Component {
     state = {}
 
     mapCenter = [51.44402355, 5.472920898];
+
+    componentDidMount(){
+        this.apiCall();
+    }
+
+    apiCall = async () =>{
+        const BASE_URL = "http://localhost:8000/api/bedrijven"
+        axios.get(BASE_URL).then((response) => {
+            this.setState({mapData2: response.data});
+        });
+    }
 
     render() {
         return (
@@ -25,7 +37,7 @@ class MyMap extends React.Component {
             zoom={12}
             style={{width: '100%', height: '100%'}}
             >
-            {mapData.map(bedrijf =>{
+            {this.state.mapData2?.map(bedrijf =>{
                 if(bedrijf.status === "onbekend"){
                     return <CircleMarker
                         key={bedrijf.mil_locationname} 
