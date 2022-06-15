@@ -8,7 +8,9 @@
   justify-content: center;
 }
 
-.navbar:first-child > div img { margin-right: auto; }
+.navbar:first-child>div img {
+  margin-right: auto;
+}
 
 .navbar {
   align-items: center;
@@ -28,7 +30,7 @@
   cursor: pointer;
 }
 
-.burger{
+.burger {
   align-items: center;
   width: 2.5rem;
   height: 0.25rem;
@@ -38,7 +40,7 @@
   transition: all 0.3s linear;
 }
 
-.navbar-menu{
+.navbar-menu {
   width: 2.5rem;
   height: 2rem;
   display: flex;
@@ -46,6 +48,11 @@
   justify-content: space-around;
   flex-flow: column nowrap;
   z-index: 10;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* .burger1{
