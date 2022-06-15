@@ -12,7 +12,7 @@ import Home from "./Home";
 
 
 class App extends React.Component {
-  state = { showing: "map", currentBedrijf: "" }
+  state = { showing: "home", currentBedrijf: "" }
 
 
   
@@ -54,8 +54,8 @@ class App extends React.Component {
         return <Irrelevant bedrijfObject={this.state.currentBedrijf} showPage={this.showPage} setIrrelevant={this.setIrrelevant}></Irrelevant>
       case "planLijst":
         return <Planlijst bedrijfObject={this.state.currentBedrijf} showPage={this.showPage} setToPlanlijst={this.setToPlanlijst} ></Planlijst>
-      case "Mymap":
-        return <MyMap bedrijfObject={this.state.currentBedrijf} showPage={this.showPage} setToMymap={this.setToPlanlijst}></MyMap>
+      case "map":
+        return <MyMap bedrijfObject={this.state.currentBedrijf} showPage={this.showPage} setBedrijf={this.setBedrijf}></MyMap>
       default:
         // return <MyMap setBedrijf={this.setBedrijf} showPage={this.showPage} />
         return <Home setBedrijf={this.setBedrijf} showPage={this.showPage} />
